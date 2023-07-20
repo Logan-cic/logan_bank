@@ -16,7 +16,7 @@ defmodule LoganBankWeb.Router do
 
   scope "/api", LoganBankWeb do
     pipe_through :api
-
+    resources "/users", UsersController, only: [:create, :update, :delete, :show]
 
   end
 
